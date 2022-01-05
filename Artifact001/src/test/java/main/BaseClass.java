@@ -21,7 +21,7 @@ public class BaseClass {
   @BeforeSuite
   @Parameters("browser")
   public void beforeSuite(String browser){
-			 
+	  System.out.println(browser);	 
 	  if(browser.equalsIgnoreCase("chrome"))
 			WebDriverManager.chromedriver().setup();
 
