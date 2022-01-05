@@ -11,6 +11,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class BaseClass {
 	public WebDriver driver;
@@ -41,8 +42,13 @@ public class BaseClass {
   @Parameters("browser")
   public void beforeTest(String browser) {
  
-      if(browser.equalsIgnoreCase("chrome"))
-    	  	driver = new ChromeDriver();
+      if(browser.equalsIgnoreCase("chrome")){
+	        ChromeOptions options = new ChromeOptions();
+	      	options.addArguments("--no-sandbox");
+        	options.addArguments("--disable-dev-shm-usage");
+        	options.addArguments("--headless");
+    	  	driver = new ChromeDriver(options);
+      }
       driver.manage().window().maximize(); 
       driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);  
       wait = new WebDriverWait(driver, 120); //2 mins
