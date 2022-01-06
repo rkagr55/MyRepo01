@@ -27,9 +27,9 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.3.1
       with:
-        path: Artifact001/test-output
+        path: rkagr55/MyRepo01/Artifact001/test-output
     - name: Download a Build Artifact
       uses: actions/download-artifact@v2.1.0
       with:
-        path: test-output
+        path: rkagr55/MyRepo01/Artifact001/test-output
    
