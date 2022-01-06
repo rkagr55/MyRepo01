@@ -26,6 +26,7 @@ public class class1 extends BaseClass{
 	  objPage2 = new Page2(driver,test);
 	  String inputText = objPage2.searchText(objExcel.getCellData(0, 0));
 	  Assert.assertEquals(inputText,objExcel.getCellData(0, 0)); 
+	  System.out.println(inputText);
   }
   
   @BeforeClass  
