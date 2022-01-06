@@ -27,4 +27,4 @@ jobs:
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v2
       with:
-        path: "**/Screenshots/"
+        path: "MyRepo01/Artifact001/Screenshots/"
