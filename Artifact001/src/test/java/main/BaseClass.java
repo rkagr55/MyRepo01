@@ -46,7 +46,8 @@ public class BaseClass {
 	      	options.addArguments("--no-sandbox");
         	options.addArguments("--disable-dev-shm-usage");
         	options.addArguments("--headless");
-	        options.addArguments("screenshot");
+	        options.addArguments("--screenshot");
+	        //options.addArguments("window-size=1400,800");
     	  	driver = new ChromeDriver(options);
       }
       driver.manage().window().maximize(); 
