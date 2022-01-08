@@ -24,3 +24,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -f Artifact001/pom.xml clean test
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v2.1.0
+      with:
+        name: 'snapshots'
+        path: 'Artifact001/test-output'
