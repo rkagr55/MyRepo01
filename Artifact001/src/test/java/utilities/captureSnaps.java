@@ -13,7 +13,7 @@ public class captureSnaps {
 		File destinationPath = null;
 		try { 
 		  File sourcePath = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		  String destination = "screenshot_"+new SimpleDateFormat("MM_dd_yyyy_HH_mm_ss_SSS").format(new Date())+".png"; //target/screenshot..
+		  String destination = "Artifact001/screenshot_"+new SimpleDateFormat("MM_dd_yyyy_HH_mm_ss_SSS").format(new Date())+".png"; //target/screenshot..
 		  destinationPath = new File(destination);
 		  FileHandler.copy(sourcePath, destinationPath);
 		  
