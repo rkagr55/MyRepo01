@@ -9,8 +9,7 @@ import pages.Page1;
 import pages.Page2;
 import utilities.ExcelUtils;
 
-public class class2
-extends BaseClass{
+public class class2 extends BaseClass{
 	Page1 objPage1;
 	Page2 objPage2;
  	ExtentTest test;
