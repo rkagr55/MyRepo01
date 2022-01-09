@@ -25,7 +25,7 @@ public class BaseClass {
 	  if(browser.equalsIgnoreCase("chrome"))
 			WebDriverManager.chromedriver().setup();
 
-	  reporter = new ExtentSparkReporter("target/extentreport_"+new SimpleDateFormat("MM_dd_yyyy_HH_mm_ss_SSS").format(new Date())+".html"); //ExtentReports/extentreport_...
+	  reporter = new ExtentSparkReporter("ExtentReports/extentreport_"+new SimpleDateFormat("MM_dd_yyyy_HH_mm_ss_SSS").format(new Date())+".html"); //ExtentReports/extentreport_...
 	  reporter.config().setDocumentTitle("DocumentTitle_01");
 	  reporter.config().setReportName("ReportName_01");
 	  reporter.config().setTheme(Theme.DARK);
