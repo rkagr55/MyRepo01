@@ -1,7 +1,11 @@
-node {
-	stage ('Build'){
-    	    dir("Artifact001") {
-	        bat 'mvn clean test'
-            } 
-        }
+pipeline{
+       agent any
+       stages{
+              stage('Build'){
+                 mvn 'clean compile'
+                }
+              stage('Test'){
+                 mvn 'test'
+                }
+       }
 }
