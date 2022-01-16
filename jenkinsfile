@@ -4,7 +4,7 @@ node {
 	}
 	stage ('Build'){
     	    dir("Artifact001") {
-	        sh "mvn clean test"
+	        sh "mvn clean install"
             }
        	    dir("Artifact001/target") {
 	        sh "java -jar com.test-1.0-SNAPSHOT.jar"
