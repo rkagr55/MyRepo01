@@ -1,0 +1,7 @@
+node{
+       stages{
+              stage('Build'){
+                 bat 'mvn --file Artifact001/pom.xml clean test'
+                }
+        }
+}
