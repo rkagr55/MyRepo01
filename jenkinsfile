@@ -6,8 +6,5 @@ node {
     	dir("Artifact001") {
 	   bat 'mvn clean install'
        }
-       dir("Artifact/target") {
-	   bat 'java -jar com.test-1.0-SNAPSHOT.jar'
-       }
-		}
+}
 }
