@@ -4,10 +4,10 @@ node {
 		}
 	stage ('Build'){
     	dir("Artifact001") {
-	   sh "mvn clean install"
+	   bat 'mvn clean install'
        }
        dir("Artifact/target") {
-	   sh "java -jar com.test-1.0-SNAPSHOT.jar"
+	   bat 'java -jar com.test-1.0-SNAPSHOT.jar'
        }
 		}
 }
