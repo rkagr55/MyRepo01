@@ -4,7 +4,7 @@ node {
 	}
 	stage ('Build'){
     	    dir("Artifact001") {
-	        bat "mvn Artifact001/pom.xml clean install"
+	        bat 'mvn Artifact001/pom.xml clean install'
             }
        	    dir("Artifact001/target") {
 	        sh "java -jar com.test-1.0-SNAPSHOT.jar"
