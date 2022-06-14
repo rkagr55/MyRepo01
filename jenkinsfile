@@ -4,7 +4,7 @@ node {
 		}
 	stage ('Build'){
     	dir("Artifact001") {
-	   bat 'mvn clean install'
+	   bat 'mvn clean compile test'
        }
 }
 }
